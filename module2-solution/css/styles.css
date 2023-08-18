@@ -1,0 +1,79 @@
+html, body {
+    font-family: 'Comic Sans MS', Arial;
+    font-size: 16px;
+    color: #000;
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.wrap {
+    min-width: 320px;
+    padding: 36px 25px 0;
+}
+
+h1 {
+    font-size: 175%;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.our-menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 25px;
+}
+
+.our-menu > div {
+    position: relative;
+    border: 1px solid #000;
+    background: #999999;
+    padding: 35px 15px 5px;
+    width: 100%;
+    overflow: hidden;
+    flex: 0 0 calc(100% / 3 - 17px);
+}
+.our-menu > div > div {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-left: 1px solid #000;
+    border-bottom: 1px solid #000;
+    font-size: 125%;
+    text-align: center;
+    line-height: 27px;
+}
+.our-menu > div:nth-child(1) > div {background-color: #d49898; padding: 0 32px;}
+.our-menu > div:nth-child(2) > div {background-color: #bf4343; padding: 0 50px;}
+.our-menu > div:nth-child(3) > div {background-color: #e4d29b; padding: 0 42px;}
+.our-menu > div:nth-child(2) {left: 5px;}  /* shift for create gap after first box https://monosnap.com/file/mgPK9XaRPJMuo4LNZ5X5z0rdbQWQwx */
+
+/*
+  992 -> desktop
+  768 -> tablet
+  320 - 767 - mobile
+*/
+
+@media (min-width: 768px) and (max-width: 991px) {
+    h1 {margin-bottom: 40px}
+    .our-menu {gap: 20px}
+    .our-menu > div {
+        min-height: 150px;
+        flex: 0 0 calc(100% / 2 - 10px);
+        left: 0 !important;
+    }
+    .our-menu > div:nth-child(3) {flex: 0 0 100%;}
+}
+
+@media (max-width: 767px) {
+    .wrap {padding: 36px 50px 0;}  /*In my opinion, the indentation for mobile devices is large 50px, 15px would be enough*/
+    h1 {margin-bottom: 20px}
+    .our-menu {gap: 15px 0}
+    .our-menu > div {
+        min-height: 150px;
+        flex: 0 0 100%;
+        left: 0 !important;
+    }
+}
