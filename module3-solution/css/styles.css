@@ -1,0 +1,81 @@
+html, body {
+    font-family: Arial;
+    font-size: 16px;
+    color: #000;
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.wrap {
+    min-width: 320px;
+    max-width: 1200px;
+    padding: 0 25px;
+    margin: 0 auto;
+}
+
+
+h2 {
+    font-size: 175%;
+    font-weight: 600;
+    margin: 0 0 30px;
+}
+h3 {
+    font-size: 125%;
+    font-weight: 600;
+    text-align: center;
+    margin: 0 0 15px;
+}
+
+.navbar {
+    background: lightskyblue;
+    min-width: 320px;
+    padding: 0;
+}
+.navbar .drop-wrap {
+    flex-basis: 100%;
+    flex-grow: 1;
+    align-items: center;
+}
+.navbar .navbar-toggler {
+    outline: none !important;
+    box-shadow: none;
+    margin-right: 20px;
+}
+.navbar .navbar-toggler:not(.collapsed) {
+    border-color: #fff;
+}
+.navbar .navbar-toggler:not(.collapsed) .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+.navbar .container-fluid {padding: 0;}
+.navbar .navbar-brand {
+    font-size: 200%;
+    font-weight: 600;
+    margin: 0.5rem 0 0.5rem 20px;
+}
+.navbar .navbar-nav {
+    background-color: lightgoldenrodyellow;
+}
+.navbar .navbar-nav .nav-link  {
+    text-align: center;
+    border-bottom: 1px solid #000;
+    color: #000;
+    font-size: 125%;
+}
+.navbar .navbar-nav .nav-link:last-child {
+    margin-bottom: 0;
+}
+
+.our-menu {
+    padding: 30px 0 0;
+}
+.our-menu > .row > div {margin-bottom: 20px;}
+.our-menu .item {
+    min-height: 150px;
+    background: lightgray;
+    height: 100%;
+    padding: 20px;
+}
